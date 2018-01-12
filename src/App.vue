@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <h1>Hello<span v-if="name">, {{name}}</span><span v-else> world</span>!</h1>
-    <home-status></home-status>
-  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <app-user></app-user>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>
-  // this part of code is kind of a new Vue instance
-export default {
-  data:function () {
-    return{
-      name: 'Vasya'
+    import User from './components/User.vue';
+
+    export default {
+        components: {
+            appUser: User
+        }
     }
-  }
-}
 </script>
 
-<style lang="scss">
+<style>
+    div.component {
+        border: 1px solid black;
+        padding: 30px;
+    }
 </style>
